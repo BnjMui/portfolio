@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "projectName": "Prosjekt navn",
+    "gitUrl": "github.com/exampleRepo",
+    "category": "WebApplikasjon",
+    "description": "Kort beskrivelse av prosjektet, som hva eller hvorfor dette ble laget osv.... kan bli litt lang?",
+    "date": "2024-8-29"
+  }
+]
