@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Portfolio</h1>
+      <p>Jonas A. Evensen</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>List of projects</h2>
+        <ul id="project-list">
+          <!--Her kommer det lister som inneholder <article>content</article>-->
+        </ul>
+        <nav>
+          <button disabled="true" id="previous">Previous page</button>
+          <p id="page-number">Page x of x</p>
+          <button id="next">Next page</button>
+        </nav>
+      </section>
+      <section>
+        <h2>Create new project</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Enter the projects name..."
+          />
+          <label for="link">Link:</label>
+          <input
+            id="link"
+            name="link"
+            type="url"
+            placeholder="Link to github etc..."
+          />
+          <label for="category">Category</label>
+          <select name="category" id="category">
+            <option value="category1">category1</option>
+          </select>
+          <label for="description">Description:</label>
+          <textarea id="description"></textarea>
+          <button id="submit" type="submit">Add project</button>
+        </form>
+      </section>
+      <footer>
+        <p>Copyright: Jonas A. Evensen 2024</p>
+      </footer>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

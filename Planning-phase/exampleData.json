@@ -1,10 +1,18 @@
 [
   {
-    "id": 1,
-    "projectName": "Prosjekt navn",
+    "id": 0,
+    "projectName": "Prosjekt navn#1",
     "gitUrl": "github.com/exampleRepo",
     "category": "WebApplikasjon",
     "description": "Kort beskrivelse av prosjektet, som hva eller hvorfor dette ble laget osv.... kan bli litt lang?",
     "date": "2024-8-29"
+  },
+  {
+    "id": 1,
+    "projectName": "Prosjekt navn#2",
+    "gitUrl": "github.com/exampleRepo",
+    "category": "React/ts",
+    "description": "Kort beskrivelse av prosjektet, som hva eller hvorfor dette ble laget osv.... kan bli litt lang?",
+    "date": "2024-8-30"
   }
 ]
