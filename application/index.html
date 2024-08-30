@@ -13,18 +13,67 @@
     </header>
 
     <main>
-      <section>
+      <section id="listed-projects">
         <h2>List of projects</h2>
         <ul id="project-list">
           <!--Her kommer det lister som inneholder <article>content</article>-->
+          <li>
+            <article>
+              <h3>Project1</h3>
+              <p>Category: WebApp</p>
+              <p>Link to project:<a href="github.com">github.com</a></p>
+              <p>Created at: 2024-8-1</p>
+              <a href="#">Read more</a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Project2</h3>
+              <p>Category: WebApp</p>
+              <p>Link to project:<a href="github.com">github.com</a></p>
+              <p>Created at: 2024-8-2</p>
+              <a href="#">Read more</a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Project3</h3>
+              <p>Category: WebApp</p>
+              <p>Link to project:<a href="github.com">github.com</a></p>
+              <p>Created at: 2024-8-3</p>
+              <a href="#">Read more</a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Project4</h3>
+              <p>Category: WebApp</p>
+              <p>Link to project:<a href="github.com">github.com</a></p>
+              <p>Created at: 2024-8-4</p>
+              <a href="#">Read more</a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Project5</h3>
+              <p>Category: WebApp</p>
+              <p>Link to project:<a href="github.com">github.com</a></p>
+              <p>Created at: 2024-8-5</p>
+              <a href="#">Read more</a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Project6</h3>
+              <p>Category: WebApp</p>
+              <p>Link to project:<a href="github.com">github.com</a></p>
+              <p>Created at: 2024-8-6</p>
+              <a href="#">Read more</a>
+            </article>
+          </li>
         </ul>
-        <nav>
-          <button disabled="true" id="previous">Previous page</button>
-          <p id="page-number">Page x of x</p>
-          <button id="next">Next page</button>
-        </nav>
       </section>
-      <section>
+      <section id="create-new">
         <h2>Create new project</h2>
         <form>
           <label for="name">Name:</label>
@@ -41,19 +90,23 @@
             type="url"
             placeholder="Link to github etc..."
           />
-          <label for="category">Category</label>
-          <select name="category" id="category">
-            <option value="category1">category1</option>
-          </select>
+          <label for="category">Category:</label>
+          <input
+            type="text"
+            id="category"
+            name="category"
+            placeholder="Enter a category"
+          />
           <label for="description">Description:</label>
           <textarea id="description"></textarea>
           <button id="submit" type="submit">Add project</button>
         </form>
       </section>
-      <footer>
-        <p>Copyright: Jonas A. Evensen 2024</p>
-      </footer>
     </main>
+    <footer>
+      <p>Copyright</p>
+      <p>Jonas A. Evensen 2024</p>
+    </footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
