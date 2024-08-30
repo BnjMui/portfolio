@@ -1,6 +1,6 @@
 @import "./reset.scss";
 @import "./variables.scss";
-
+//Har i all forstand gått ut og forbi wireFramen jeg opprinnelig lagde her.
 :root {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -11,7 +11,6 @@ html {
     background-color: $main-bg;
     justify-content: center;
     flex-wrap: wrap;
-    border-radius: 5px;
     background-color: $header-main;
     //Header
     header {
@@ -37,6 +36,7 @@ html {
     main {
       background-color: $main-bg;
       width: 90%;
+      border-radius: 7px;
     }
 
     //project list

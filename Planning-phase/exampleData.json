@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "projectName": "Prosjekt navn#1",
+    "projectName": "Tic tac toe-game",
     "gitUrl": "github.com/exampleRepo",
     "category": "WebApplikasjon",
     "description": "Kort beskrivelse av prosjektet, som hva eller hvorfor dette ble laget osv.... kan bli litt lang?",
