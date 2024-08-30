@@ -82,7 +82,12 @@ html {
               width: 100%;
             }
             a {
+              display: inline-block;
               color: black;
+              width: 100%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
             }
           }
         }
@@ -119,6 +124,11 @@ html {
           margin-left: auto;
         }
       }
+      #success-message {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
     }
 
     footer {
@@ -143,6 +153,13 @@ html {
       border: 1px solid;
       border-radius: 5px;
       padding: 0.5rem;
+      transition: all 0.3s ease;
+      &:hover {
+        cursor: pointer;
+        background-color: #e55b5b;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+      }
     }
   }
 }
