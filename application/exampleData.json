@@ -16,5 +16,14 @@
     "category": "React/ts",
     "description": "Kort beskrivelse av prosjektet, som hva eller hvorfor dette ble laget osv.... kan bli litt lang?",
     "date": "2024-8-30"
+  },
+  {
+    "id": 2,
+    "createdAt": "2024-09-02T21:13:30.895Z",
+    "projectName": "UIN-eksamen-2024",
+    "url": "https://github.com/BnjMui/UIN_eksamen2024.git",
+    "category": "React & Sanity",
+    "description": "Eksamen i utvikling av interaktive nettsteder i 2024. Gruppeoppgave, mappeinnlevering.",
+    "date": "2024-09-02"
   }
 ]
