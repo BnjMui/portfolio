@@ -1,8 +1,8 @@
 import "./static/style.scss";
-//Bruker fetch for å hente data fra json filen.
+// Bruker fetch for å hente data fra json filen.
 // const getJson = async () => {
 //   try {
-//     const response = await fetch("./exampleData.json");
+//     const response = await fetch("./data.json");
 //     const data = await response.json();
 //     console.log(data);
 //     return data;
@@ -11,6 +11,7 @@ import "./static/style.scss";
 //   }
 // };
 // const data = await getJson();
+// console.log(data, "dette er data");
 
 //Funksjon for å hente data fra hono-server.
 const getProjects = async () => {
@@ -18,8 +19,8 @@ const getProjects = async () => {
     const response = await fetch("http://localhost:3999");
     const data = await response.json();
     return data;
-  } catch {
-    console.log(console.error("error"));
+  } catch (error) {
+    console.error(error);
   }
 };
 //Funksjon for å vise dataen i html.
@@ -74,8 +75,8 @@ const submit = async (e) => {
     } else {
       console.error("Error when adding new project to server");
     }
-  } catch {
-    console.log(console.error("error", error));
+  } catch (error) {
+    console.error(error);
   }
   form.reset();
   msg.textContent = "Your project was succesfully added!";

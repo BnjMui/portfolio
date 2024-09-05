@@ -25,5 +25,50 @@
     "category": "React & Sanity",
     "description": "Eksamen i utvikling av interaktive nettsteder i 2024. Gruppeoppgave, mappeinnlevering.",
     "date": "2024-09-02"
+  },
+  {
+    "id": 3,
+    "createdAt": "2024-09-05T12:09:36.370Z",
+    "projectName": "Prosjektet til en kar",
+    "url": "http://li.li",
+    "category": "Cat",
+    "description": "Desc",
+    "date": "2024-09-05"
+  },
+  {
+    "id": 4,
+    "createdAt": "2024-09-05T12:10:52.190Z",
+    "projectName": "ja",
+    "url": "http://ja.ja",
+    "category": "cat",
+    "description": "desc",
+    "date": "2024-09-05"
+  },
+  {
+    "id": 5,
+    "createdAt": "2024-09-05T12:15:21.392Z",
+    "projectName": "prosjekt",
+    "url": "http://li.li",
+    "category": "ja",
+    "description": "ja",
+    "date": "2024-09-05"
+  },
+  {
+    "id": 6,
+    "createdAt": "2024-09-05T13:08:57.950Z",
+    "projectName": "ja",
+    "url": "http://li.li",
+    "category": "ja",
+    "description": "ja",
+    "date": "2024-09-05"
+  },
+  {
+    "id": 7,
+    "createdAt": "2024-09-05T14:05:20.564Z",
+    "projectName": "Nei",
+    "url": "http://nei.nei",
+    "category": "nei",
+    "description": "nei",
+    "date": "2024-09-05"
   }
 ]
