@@ -24,13 +24,12 @@ app.post("/add", async (c) => {
     createdAt: new Date(),
     ...newProject,
   });
-  await writeFile("./data.json", JSON.stringify(projects, null, 2), (err) => {
-    console.log("new data added");
-    console.log({
-      id: projects.length - 1,
-      createdAt: new Date(),
-      ...newProject,
-    });
+  await writeFile("./data.json", JSON.stringify(projects, null, 2));
+  console.log("new data added");
+  console.log({
+    id: projects.length - 1,
+    createdAt: new Date(),
+    ...newProject,
   });
 
   return c.json(projects, { status: 201 });
