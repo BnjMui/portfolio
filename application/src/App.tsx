@@ -1,24 +1,27 @@
 import Projects from "./components/Projects";
 import Contact from "./Contact";
-import Experiences from "./Experiences";
+import Experiences from "./components/Experiences";
 import Header from "./Header";
 
 function App() {
-  const student = "Halgeir Geirson";
-  const degree = "Bachelor IT";
-  const points = 180;
-  const experienceOne = "Figma UI for customer X";
-  const experienceTwo = "Website for customer Y";
-  const email = "student@hiof.no";
+  const student = {
+    name: "Halgeir Geirson",
+    degree: "Bachelor IT",
+    points: 180,
+    experiences: [
+      {
+        experienceOne: "Figma UI for customer X",
+        experienceTwo: "Website for customer Y",
+      },
+    ],
+    email: "student@hiof.no",
+  };
 
   return (
     <div>
-      <Header student={student} degree={degree} points={points} />
-      <Experiences
-        experienceOne={experienceOne}
-        experienceTwo={experienceTwo}
-      />
-      <Contact email={email} />
+      <Header student={student} />
+      <Experiences student={student} />
+      <Contact student={student} />
 
       <Projects />
     </div>

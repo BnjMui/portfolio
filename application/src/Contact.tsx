@@ -1,6 +1,6 @@
-const Contact = ({ email }) => (
+const Contact = ({ student }) => (
   <>
-    <p>{email}</p>
+    <p>{student.email}</p>
   </>
 );
 

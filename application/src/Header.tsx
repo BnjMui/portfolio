@@ -1,8 +1,8 @@
-const Header = ({ student, degree, points }) => (
+const Header = ({ student }) => (
   <>
-    <h1>{student}</h1>
+    <h1>{student.name}</h1>
     <p>
-      {degree} {points} studiepoeng
+      {student.degree} {student.points} studiepoeng
     </p>
   </>
 );
