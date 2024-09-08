@@ -1,28 +1,29 @@
 import Project from "./Project";
+import { FormData } from "./types";
 
 export default function Projects() {
-  const projects = [
+  const projects: FormData[] = [
     {
       id: 1,
-      title: "Nettside for lokal kafé",
+      name: "Nettside for lokal kafé",
       description:
         "Utvikling av en responsiv nettside for en lokal kafé med online bestillingssystem og meny.",
     },
     {
       id: 2,
-      title: "Mobilapp for treningsplanlegging",
+      name: "Mobilapp for treningsplanlegging",
       description:
         "En mobilapplikasjon for å lage personlige treningsplaner, spore progresjon, og dele treningsresultater.",
     },
     {
       id: 3,
-      title: "E-handelsplattform for klær",
+      name: "E-handelsplattform for klær",
       description:
         "Opprettelse av en brukervennlig e-handelsplattform for en lokal klesbutikk, med betalingsintegrasjoner og kundelogging.",
     },
     {
       id: 4,
-      title: "Bokblogg med anmeldelser",
+      name: "Bokblogg med anmeldelser",
       description:
         "En bloggplattform der brukere kan skrive og dele bokanmeldelser, samt delta i diskusjoner om ulike bøker.",
     },
@@ -30,12 +31,16 @@ export default function Projects() {
 
   return (
     <>
-      {projects.map((project) => (
-        <Project key={project.id}>
-          <h2>{project.title}</h2>
-          <p>{project.description ?? project.id}</p>
-        </Project>
-      ))}
+      {projects.length === 0 ? (
+        <p> Ingen prosjekter</p>
+      ) : (
+        projects?.map((project) => (
+          <Project key={project.id}>
+            <h2>{project.name}</h2>
+            <p>{project.description ?? project.id}</p>
+          </Project>
+        ))
+      )}
     </>
   );
 }

@@ -5,5 +5,5 @@
 // };
 
 export default function Project({ children }) {
-  return <>{children}</>;
+  return <article>{children}</article>;
 }

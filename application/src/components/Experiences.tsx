@@ -1,9 +1,9 @@
-import Experience from "./Experience";
-const Experiences = ({ student }) => (
+import { PropChildren } from "./types";
+
+const Experiences: React.FC<PropChildren> = ({ children }) => (
   <div>
-    {student.experiences.map((e) => (
-      <Experience key={e}>{e.experience}</Experience>
-    ))}
+    <h2>Erfaringer</h2>
+    <section>{children}</section>
   </div>
 );
 

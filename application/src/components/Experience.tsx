@@ -1,3 +1,5 @@
-export default function Experience({ children }) {
-  return <>{children}</>;
+import { PropChildren } from "./types";
+
+export default function Experience({ children }: PropChildren) {
+  return <p>{children}</p>;
 }
