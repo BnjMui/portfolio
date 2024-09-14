@@ -1,26 +1,25 @@
 import { useState } from "react";
-import { FormData } from "./types";
+import { ProjectType } from "./types";
 
-export default function CreateProject() {
-  const [formData, setFormData] = useState<FormData>({
+export default function CreateProject({ projects, setProjects }) {
+  const [formData, setFormData] = useState<ProjectType>({
     name: "",
     category: "",
     url: "",
     description: "",
   });
-  const [newProjects, setNewProjects] = useState<FormData[]>([]);
 
   const createProject = (event: React.FormEvent) => {
     event.preventDefault();
 
-    const projectExists = newProjects.some(
+    const projectExists = projects.some(
       (project) => project.name === formData.name
     );
     if (projectExists) {
       console.error("A project with that name already exists.");
       return;
     }
-    setNewProjects((prev) => [...prev, formData]);
+    setProjects((prev) => [...prev, { id: projects.length, ...formData }]);
 
     setFormData({
       name: "",
@@ -28,6 +27,7 @@ export default function CreateProject() {
       url: "",
       description: "",
     });
+    console.log(projects);
   };
 
   const updateValues = (

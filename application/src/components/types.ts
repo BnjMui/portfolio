@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface FormData {
+export interface ProjectType {
   id?: number;
   name: string;
   category?: string;
