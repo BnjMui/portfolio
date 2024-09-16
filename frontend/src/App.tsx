@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/main.scss";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Experiences from "./components/Experiences";
@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import CreateProject from "./components/CreateProject";
 import { ProjectType } from "./components/types";
 import { useState } from "react";
+import ServerData from "./components/ServerData";
 
 function App() {
   const student = {
@@ -61,6 +62,7 @@ function App() {
       <Contact student={student} />
       <CreateProject projects={projects} setProjects={setProjects} />
       <Projects projects={projects} setProjects={setProjects} />
+      <ServerData />
     </>
   );
 }
