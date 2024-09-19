@@ -1,6 +1,7 @@
 import Contact from "./components/Contact";
 import Experiences from "./components/Experiences";
 import Header from "./components/Header";
+import Projects from "./components/Projects";
 
 function App() {
   const student = "Halgeir Geirson";
@@ -18,6 +19,7 @@ function App() {
         experienceTwo={experienceTwo}
       />
       <Contact email={email} />
+      <Projects />
     </div>
   );
 }

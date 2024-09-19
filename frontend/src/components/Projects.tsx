@@ -1,3 +1,5 @@
+import Project from "./Project";
+
 export type ProjectType = {
   id: string;
   title: string;
@@ -30,5 +32,11 @@ export default function Projects() {
         "Implement an AI-powered chatbot to enhance customer support and automate common inquiries.",
     },
   ];
-  return;
+  return (
+    <>
+      {projectList.map((p, index) => (
+        <Project key={index} project={p} />
+      ))}
+    </>
+  );
 }
