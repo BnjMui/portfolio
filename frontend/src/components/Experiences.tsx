@@ -1,10 +1,15 @@
-import { PropChildren } from "./types";
+import Experience from "./Experience";
 
-const Experiences: React.FC<PropChildren> = ({ children }) => (
-  <div>
-    <h2>Erfaringer</h2>
-    <section>{children}</section>
-  </div>
-);
-
-export default Experiences;
+type ExperienceProps = {
+  experienceOne: string;
+  experienceTwo: string;
+};
+export default function Experiences(props: ExperienceProps) {
+  const { experienceOne = "", experienceTwo = "" } = props;
+  return (
+    <>
+      <Experience experience={experienceOne} />
+      <Experience experience={experienceTwo} />
+    </>
+  );
+}

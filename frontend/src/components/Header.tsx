@@ -1,10 +1,16 @@
-const Header = ({ student }) => (
-  <>
-    <h1>{student.name}</h1>
-    <p>
-      {student.degree} {student.points} studiepoeng
-    </p>
-  </>
-);
-
-export default Header;
+type HeaderProps = {
+  student: string;
+  degree: string;
+  points: number;
+};
+export default function Header(props: HeaderProps) {
+  const { student = "student", degree = "degree", points = 0 } = props;
+  return (
+    <>
+      <h1>{student}</h1>
+      <p>
+        {degree} {points} studiepoeng
+      </p>
+    </>
+  );
+}

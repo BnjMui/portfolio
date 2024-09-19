@@ -1,5 +1,8 @@
-import { PropChildren } from "./types";
+import { ProjectType } from "./Projects";
 
-export default function Project({ children }: PropChildren) {
-  return <article>{children}</article>;
+type ProjectProps = {
+  project: ProjectType;
+};
+export default function Project({ project }: ProjectProps) {
+  return;
 }

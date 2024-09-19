@@ -1,5 +1,10 @@
-import { PropChildren } from "./types";
-
-export default function Experience({ children }: PropChildren) {
-  return <p>{children}</p>;
+type ExperienceProps = {
+  experience: string;
+};
+export default function Experience({ experience }: ExperienceProps) {
+  return (
+    <>
+      <p>{experience}</p>
+    </>
+  );
 }
