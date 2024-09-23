@@ -7,7 +7,7 @@ export default function Header(props: HeaderProps) {
   const { student = "student", degree = "degree", points = 0 } = props;
   return (
     <>
-      <h1>{student}</h1>
+      <h1>{student} Portfolio</h1>
       <p>
         {degree} {points} studiepoeng
       </p>

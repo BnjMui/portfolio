@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react";
+import SubmitButton from "./SubmitButton";
 
 type ContactProps = {
   email: string;
@@ -26,6 +27,7 @@ export default function Contact({ email }: ContactProps) {
   return (
     <>
       <button
+        className="email"
         type="button"
         onClick={() => {
           alert(email);
@@ -34,7 +36,7 @@ export default function Contact({ email }: ContactProps) {
         Vis e-post
       </button>
       <form onSubmit={handleSubmit}>
-        <pre>{JSON.stringify({ name, message })}</pre>
+        {/* <pre>{JSON.stringify({ name, message })}</pre> */}
 
         <label htmlFor="message">Name</label>
         <input
@@ -54,7 +56,7 @@ export default function Contact({ email }: ContactProps) {
           placeholder="Write your message here..."
           onChange={handleChange}
         ></textarea>
-        <button type="submit">Submit</button>
+        <SubmitButton />
       </form>
     </>
   );

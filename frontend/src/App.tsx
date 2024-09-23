@@ -1,3 +1,4 @@
+import "./styles/main.scss";
 import { useEffect, useState } from "react";
 import Contact from "./components/Contact";
 import CreateProject from "./components/CreateProject";
@@ -8,14 +9,15 @@ import Header from "./components/Header";
 import Projects from "./components/Projects";
 import { ProjectType } from "./components/Projects";
 import { ofetch } from "ofetch";
+import Footer from "./components/Footer";
 
 function App() {
   const student: any = {
-    studentName: "Halgeir Geirson",
-    degree: "Bachelor IT",
+    studentName: "Jonas A. Evensen",
+    degree: "Bachelor Informasjonssystemer",
     points: 180,
-    experiences: ["Figma UI for customer X", "Website for customer Y"],
-    email: "student@hiof.no",
+    experiences: [],
+    email: "jonasae@hiof.no",
   };
   const [projectList, setProjectList] = useState<ProjectType[]>([]);
 
@@ -40,24 +42,24 @@ function App() {
     setProjectList(projectList.filter((project) => projectId !== project.id));
   };
   return (
-    <div>
+    <>
       <Header
         student={student.studentName}
         degree={student.degree}
         points={student.points}
       />
-      <CreateProject updateProject={updateProjects} />
       <Experiences>
-        <h2>Experience</h2>
-        <Empty data={student}>
+        <Empty data={student.experiences}>
           {student.experiences.map((student: string) => (
             <Experience key={student} experience={student} />
           ))}
         </Empty>
       </Experiences>
+      <CreateProject updateProject={updateProjects} />
       <Contact email={student.email} />
       <Projects projectList={projectList} removeProject={removeProject} />
-    </div>
+      <Footer />
+    </>
   );
 }
 

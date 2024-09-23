@@ -3,5 +3,10 @@ export default function Experiences({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <h2>Experiences</h2>
+      {children}
+    </>
+  );
 }

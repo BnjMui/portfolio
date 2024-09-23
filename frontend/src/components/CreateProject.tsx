@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react";
+import SubmitButton from "./SubmitButton";
 
 export default function CreateProject({
   updateProject,
@@ -32,7 +33,7 @@ export default function CreateProject({
     <>
       <h2>Create a new project</h2>
       <form onSubmit={handleSubmit}>
-        <pre>{JSON.stringify({ title, description })}</pre>
+        {/* <pre>{JSON.stringify({ title, description })}</pre> */}
         <label htmlFor="title">Title: </label>
         <input
           type="text"
@@ -57,7 +58,7 @@ export default function CreateProject({
           value={description}
           onChange={handleChange}
         />
-        <button type="submit">Submit</button>
+        <SubmitButton />
       </form>
     </>
   );
