@@ -1,42 +1,59 @@
+import Empty from "./Empty";
 import Project from "./Project";
 
 export type ProjectType = {
   id: string;
   title: string;
   description: string;
+  category?: string;
 };
-export default function Projects() {
-  const projectList: ProjectType[] = [
-    {
-      id: "1",
-      title: "Website Redesign",
-      description:
-        "Overhaul the company's main website to improve user experience and modernize the design.",
-    },
-    {
-      id: "2",
-      title: "Mobile App Development",
-      description:
-        "Create a cross-platform mobile app for customers to access our services on-the-go.",
-    },
-    {
-      id: "3",
-      title: "Database Optimization",
-      description:
-        "Improve database performance and structure to handle increased user load and data complexity.",
-    },
-    {
-      id: "4",
-      title: "AI Chatbot Integration",
-      description:
-        "Implement an AI-powered chatbot to enhance customer support and automate common inquiries.",
-    },
-  ];
+export default function Projects({
+  projectList,
+  removeProject,
+}: {
+  projectList: ProjectType[];
+  removeProject: Function;
+}) {
+  const projectsByCategory = projectList.reduce((totals, project) => {
+    //Funksjon lånt av ChatGPT :))) Kildehenvisning er viktig!!
+    const category = project.category || "Uncategorized";
+    totals[category] = (totals[category] || 0) + 1;
+    return totals;
+  }, {} as { [category: string]: number });
+
   return (
     <>
-      {projectList.map((p, index) => (
-        <Project key={index} project={p} />
-      ))}
+      <h2>Live projects</h2>
+      <Empty data={projectList}>
+        {projectList.map((p, index) => (
+          <Project key={index}>
+            <h3>{p.title}</h3>
+            <p>Project description:</p>
+            <p>{p.description}</p>
+            <p>Category: {p.category ? p.category : "No category found"}</p>
+            <button
+              type="button"
+              onClick={() => {
+                removeProject(p.id);
+              }}
+            >
+              Remove project
+            </button>
+          </Project>
+        ))}
+        <h2>Total projects per category:</h2>
+        <ul>
+          {Object.entries(projectsByCategory).map(
+            (
+              [category, total] //Funksjon lånt av ChatGPT :))) Kildehenvisning er viktig!!
+            ) => (
+              <li key={category}>
+                {category}: {total} project(s)
+              </li>
+            )
+          )}
+        </ul>
+      </Empty>
     </>
   );
 }

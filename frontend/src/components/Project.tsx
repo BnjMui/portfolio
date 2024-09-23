@@ -1,16 +1,9 @@
-import { ProjectType } from "./Projects";
+import { ReactNode } from "react";
 
-type ProjectProps = {
-  project: ProjectType;
-};
-export default function Project({ project }: ProjectProps) {
-  const { id, title, description } = project;
+export default function Project({ children }: { children: ReactNode }) {
   return (
     <>
-      <article key={id}>
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </article>
+      <article>{children}</article>
     </>
   );
 }
