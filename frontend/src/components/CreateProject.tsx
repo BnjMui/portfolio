@@ -9,13 +9,16 @@ export default function CreateProject({
   const [title, setTitle] = useState<string>("");
   const [description, setDescription] = useState<string>("");
   const [category, setCategory] = useState<string>("");
+  const [url, setUrl] = useState<string>("");
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     e.target.name === "title"
       ? setTitle(e.target.value)
       : e.target.name === "category"
       ? setCategory(e.target.value)
-      : setDescription(e.target.value);
+      : e.target.name === "description"
+      ? setDescription(e.target.value)
+      : setUrl(e.target.value);
   };
 
   const handleSubmit = (e: FormEvent) => {
@@ -24,10 +27,13 @@ export default function CreateProject({
     updateProject({
       title: title,
       description: description,
+      url: url,
       category: category,
     });
     setTitle("");
+    setCategory("");
     setDescription("");
+    setUrl("");
   };
   return (
     <>
@@ -40,6 +46,14 @@ export default function CreateProject({
           id="title"
           name="title"
           value={title}
+          onChange={handleChange}
+        />
+        <label htmlFor="url">Url: </label>
+        <input
+          type="url"
+          id="url"
+          name="url"
+          value={url}
           onChange={handleChange}
         />
         <label htmlFor="category">Category: </label>
