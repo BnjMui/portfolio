@@ -17,7 +17,10 @@ function App() {
     studentName: "Jonas A. Evensen",
     degree: "Bachelor Informasjonssystemer",
     points: 180,
-    experiences: [],
+    experiences: [
+      "Erfaring fra eksamensarbeid",
+      "Erfaring fra pluralsight kurs",
+    ],
     email: "jonasae@hiof.no",
   };
   const [projectList, setProjectList] = useState<ProjectType[]>([]);
@@ -76,18 +79,22 @@ function App() {
         points={student.points}
       />
       <main>
-        <Experiences>
-          <Empty data={student.experiences}>
-            {student.experiences.map((student: string) => (
-              <Experience key={student} experience={student} />
-            ))}
-          </Empty>
-        </Experiences>
-        <CreateProject updateProject={updateProjects} />
-        <Contact email={student.email} />
-        <Projects projectList={projectList} removeProject={removeProject} />
-        <Footer />
+        <section>
+          <Experiences>
+            <Empty data={student.experiences}>
+              {student.experiences.map((student: string) => (
+                <Experience key={student} experience={student} />
+              ))}
+            </Empty>
+          </Experiences>
+        </section>
+        <section id="projects">
+          <CreateProject updateProject={updateProjects} />
+          <Contact email={student.email} />
+          <Projects projectList={projectList} removeProject={removeProject} />
+        </section>
       </main>
+      <Footer />
     </>
   );
 }

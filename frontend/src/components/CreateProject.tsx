@@ -11,7 +11,9 @@ export default function CreateProject({
   const [category, setCategory] = useState<string>("");
   const [url, setUrl] = useState<string>("");
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     e.target.name === "title"
       ? setTitle(e.target.value)
       : e.target.name === "category"
@@ -23,7 +25,8 @@ export default function CreateProject({
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    if (!title || !description) return;
+    if (!title || !description)
+      return alert("Projects title/description is required");
     updateProject({
       title: title,
       description: description,
@@ -42,6 +45,7 @@ export default function CreateProject({
         {/* <pre>{JSON.stringify({ title, description })}</pre> */}
         <label htmlFor="title">Title: </label>
         <input
+          required
           type="text"
           id="title"
           name="title"
@@ -65,8 +69,8 @@ export default function CreateProject({
           onChange={handleChange}
         />
         <label htmlFor="description">Description: </label>
-        <input
-          type="text"
+        <textarea
+          required
           id="description"
           name="description"
           value={description}

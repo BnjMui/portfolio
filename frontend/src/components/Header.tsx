@@ -6,11 +6,11 @@ type HeaderProps = {
 export default function Header(props: HeaderProps) {
   const { student = "student", degree = "degree", points = 0 } = props;
   return (
-    <>
+    <header>
       <h1>{student} Portfolio</h1>
       <p>
         {degree} {points} studiepoeng
       </p>
-    </>
+    </header>
   );
 }

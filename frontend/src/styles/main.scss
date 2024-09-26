@@ -2,20 +2,57 @@
 body {
   font-family: "Roboto", Helvetica, sans-serif;
   margin: 0;
+  background-color: #fefefefe;
 }
 * {
   box-sizing: border-box;
 }
-.submit-button,
-.email {
+button {
   font-size: clamp(1rem, 1vw, 2rem);
   font-weight: 700;
   padding: 0.5rem 1rem;
+  margin: 1rem 0 0 0;
   color: white;
+  width: fit-content;
   background-color: rgb(71, 71, 71);
   border-radius: 20px;
   border: 1px solid rgb(56, 56, 56);
-  max-width: 150px;
+  max-width: 180px;
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(61, 61, 61);
+  }
+}
+header {
+  padding: 1rem 2rem;
+  box-shadow: 0 0 6px;
+  h1 {
+    margin: 0;
+  }
+  p {
+    font-weight: 600;
+  }
+}
+main {
+  padding: 2rem;
+}
+section {
+  box-shadow: 2px 4px 6px grey;
+  padding: 2rem;
+  margin: 1rem auto;
+}
+article {
+  padding: 1rem;
+  box-shadow: 2px 2px 6px rgba(100, 103, 104, 0.39);
+  margin: 1rem auto;
+  border-radius: 5px;
+  overflow: hidden;
+  h4 {
+    margin: 1rem 0 0 0;
+  }
+  p {
+    margin: 0;
+  }
 }
 h1 {
   font-size: clamp(2rem, 4vw, 3rem);
@@ -28,13 +65,15 @@ form {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
-  padding: 0 2rem;
   margin: 1rem auto;
   input {
     border-radius: 7px;
     border: 1px solid black;
     min-height: 25px;
     margin: 0.5rem 0 0.8rem 0;
+    max-width: 400px;
+  }
+  textarea {
+    max-width: 400px;
   }
 }
