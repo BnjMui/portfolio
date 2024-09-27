@@ -53,6 +53,9 @@ article {
   p {
     margin: 0;
   }
+  a {
+    color: black;
+  }
 }
 h1 {
   font-size: clamp(2rem, 4vw, 3rem);
