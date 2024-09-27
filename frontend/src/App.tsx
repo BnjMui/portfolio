@@ -87,10 +87,10 @@ function App() {
               ))}
             </Empty>
           </Experiences>
+          <Contact email={student.email} />
         </section>
         <section id="projects">
           <CreateProject updateProject={updateProjects} />
-          <Contact email={student.email} />
           <Projects projectList={projectList} removeProject={removeProject} />
         </section>
       </main>

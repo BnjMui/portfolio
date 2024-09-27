@@ -77,3 +77,19 @@ form {
     max-width: 400px;
   }
 }
+footer {
+  p {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 800px) {
+  #project-list {
+    display: grid;
+
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  article {
+    width: 100%;
+  }
+}
