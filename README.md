@@ -1,5 +1,13 @@
-# portfolio_v1
+# portfolio
 
+v_2
+I denne oppgaven har jeg igjen endret designet på nettsiden, til et som er litt enklere og mer fordøyelig for øynene.
+Jeg måtte også bruke path() for å finne frem til json filen i imaginary_database mappen. npm klarte ikke å finne frem når denne lå i en annen mappe.
+Ellers er alt ganske likt i fra forrige oppgave, hvor den største forskjellen kanskje blir html-strukturen.
+Serveren er ganske lik seg selv i forrige oppgave, hvor største forskjellen er at jeg har refaktorert koden til flere mindre filer.
+
+
+v_1
 OBS(Last sequenceDiagram.png er forsåvidt ikke en del av kravene til oppgaven. Henvender til de to andre .png-filene i mappen for oppgave 1.)
 
 Jeg startet oppgaven med å lage en wireframe, to sekvensdiagram og en .json fil med et eksempel på hvordan jeg tenkte at dataen skulle se ut.
