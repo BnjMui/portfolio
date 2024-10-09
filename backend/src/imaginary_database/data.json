@@ -1,0 +1,42 @@
+[
+  {
+    "id": "2cebfbb1-5904-4e59-976d-ef44b2362542",
+    "title": "Eksamen i UIN",
+    "description": "Nettside med brukere som kan samenligne forskjellige filmer i favorittlister m.m",
+    "url": "https://github.com/BnjMui/UIN_eksamen2024",
+    "category": "React.js",
+    "createdAt": "2024-09-25"
+  },
+  {
+    "id": "b2454aeb-5f79-4a89-b0d8-2f72b8b3c6ed",
+    "title": "Reiseplanlegger",
+    "description": "En webapp som hjelper brukere å planlegge reiser med anbefalinger for destinasjoner.",
+    "url": "https://github.com/brukernavn/reiseplanlegger",
+    "category": "JavaScript",
+    "createdAt": "2024-08-15"
+  },
+  {
+    "id": "3fcd6f56-dbb3-4f2e-8c48-d7cfd3c94c7c",
+    "title": "Matoppskrift App",
+    "description": "App for å søke og lagre matoppskrifter med mulighet for å dele egne oppskrifter.",
+    "url": "https://github.com/brukernavn/matoppskrift-app",
+    "category": "React Native",
+    "createdAt": "2024-09-10"
+  },
+  {
+    "id": "9e4bb8c5-f591-44c2-b19d-df2cb83cc124",
+    "title": "Økonomi Tracker",
+    "description": "En app som lar brukere spore inntekter og utgifter for bedre økonomisk oversikt.",
+    "url": "https://github.com/brukernavn/okonomi-tracker",
+    "category": "Node.js",
+    "createdAt": "2024-07-20"
+  },
+  {
+    "id": "da347f53-1181-4db8-8e58-4e4314f238f9",
+    "title": "Læring gjennom Spill",
+    "description": "Interaktivt spill for barn for å lære grunnleggende matematikk og logikk.",
+    "url": "https://github.com/brukernavn/læring-gjennom-spill",
+    "category": "Game Development",
+    "createdAt": "2024-06-05"
+  }
+]

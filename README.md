@@ -6,7 +6,6 @@ Jeg måtte også bruke path() for å finne frem til json filen i imaginary_datab
 Ellers er alt ganske likt i fra forrige oppgave, hvor den største forskjellen kanskje blir html-strukturen.
 Serveren er ganske lik seg selv i forrige oppgave, hvor største forskjellen er at jeg har refaktorert koden til flere mindre filer.
 
-
 v_1
 OBS(Last sequenceDiagram.png er forsåvidt ikke en del av kravene til oppgaven. Henvender til de to andre .png-filene i mappen for oppgave 1.)
 
