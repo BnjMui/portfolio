@@ -1,29 +1,16 @@
-import { useEffect } from "react";
-import { ProjectType } from "../types";
 import Empty from "./Empty";
 import Project from "./Project";
+import useProjects from "../hooks/useProjects";
+import CreateProject from "./CreateProject";
 
-export default function Projects({
-  projectList,
-  removeProject,
-}: {
-  projectList: ProjectType[];
-  removeProject: Function;
-}) {
-  //Laget med hjelp av Claude
-  const projectsByCategory = (projectList: ProjectType[]) => {
-    return projectList?.reduce((acc, project) => {
-      if (project.category) {
-        acc[project.category] = (acc[project.category] || 0) + 1;
-      }
-      return acc;
-    }, {} as Record<string, number>);
-  };
-  const categoryCounts = projectsByCategory(projectList);
-  useEffect(() => {}, [projectList]);
+export default function Projects() {
+  const { projectList, get, add, remove, update, categoryCounts } =
+    useProjects();
 
   return (
     <>
+      <CreateProject updateProject={update} />
+
       <h2>Live projects</h2>
       <Empty data={projectList}>
         <div id="project-list">
@@ -38,7 +25,7 @@ export default function Projects({
               <button
                 type="button"
                 onClick={() => {
-                  removeProject(p.id);
+                  remove(p.id);
                 }}
               >
                 Remove project
