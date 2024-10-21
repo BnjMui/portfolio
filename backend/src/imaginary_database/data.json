@@ -2,10 +2,10 @@
   {
     "id": "2cebfbb1-5904-4e59-976d-ef44b2362542",
     "title": "Eksamen i UIN",
-    "description": "Nettside med brukere som kan samenligne forskjellige filmer i favorittlister m.m",
+    "description": "Nettside med brukere som kan sammenligne forskjellige filmer i favorittlister m.m",
     "url": "https://github.com/BnjMui/UIN_eksamen2024",
     "category": "React.js",
-    "createdAt": "2024-09-25"
+    "createdAt": "2024-09-25T00:00:00.000Z"
   },
   {
     "id": "b2454aeb-5f79-4a89-b0d8-2f72b8b3c6ed",
@@ -13,7 +13,7 @@
     "description": "En webapp som hjelper brukere å planlegge reiser med anbefalinger for destinasjoner.",
     "url": "https://github.com/brukernavn/reiseplanlegger",
     "category": "JavaScript",
-    "createdAt": "2024-08-15"
+    "createdAt": "2024-08-15T00:00:00.000Z"
   },
   {
     "id": "3fcd6f56-dbb3-4f2e-8c48-d7cfd3c94c7c",
@@ -21,7 +21,7 @@
     "description": "App for å søke og lagre matoppskrifter med mulighet for å dele egne oppskrifter.",
     "url": "https://github.com/brukernavn/matoppskrift-app",
     "category": "React Native",
-    "createdAt": "2024-09-10"
+    "createdAt": "2024-09-10T00:00:00.000Z"
   },
   {
     "id": "9e4bb8c5-f591-44c2-b19d-df2cb83cc124",
@@ -29,7 +29,7 @@
     "description": "En app som lar brukere spore inntekter og utgifter for bedre økonomisk oversikt.",
     "url": "https://github.com/brukernavn/okonomi-tracker",
     "category": "Node.js",
-    "createdAt": "2024-07-20"
+    "createdAt": "2024-07-20T00:00:00.000Z"
   },
   {
     "id": "da347f53-1181-4db8-8e58-4e4314f238f9",
@@ -37,7 +37,7 @@
     "description": "Interaktivt spill for barn for å lære grunnleggende matematikk og logikk.",
     "url": "https://github.com/brukernavn/læring-gjennom-spill",
     "category": "Game Development",
-    "createdAt": "2024-06-05"
+    "createdAt": "2024-06-05T00:00:00.000Z"
   },
   {
     "id": "d16bb128-c84b-4fff-b0a9-fe06cc6fc9f1",
@@ -45,7 +45,7 @@
     "description": "ja",
     "url": "http://url.url",
     "category": "cat",
-    "createdAt": "2024-10-20"
+    "createdAt": "2024-10-20T00:00:00.000Z"
   },
   {
     "id": "b5ec39d0-019b-49b6-ad61-457e31f62263",
@@ -53,7 +53,7 @@
     "description": "da",
     "url": "http://da.da",
     "category": "da",
-    "createdAt": "2024-10-20"
+    "createdAt": "2024-10-20T00:00:00.000Z"
   },
   {
     "id": "2dc34980-0fb3-47be-b0e6-685ce59bdcbe",
@@ -61,7 +61,7 @@
     "description": "da",
     "url": "http://da.da",
     "category": "ad",
-    "createdAt": "2024-10-20"
+    "createdAt": "2024-10-20T00:00:00.000Z"
   },
   {
     "id": "f4de1772-4280-4c8d-8bb6-f2daafcf7440",
@@ -69,7 +69,7 @@
     "description": "adsasd",
     "url": "http://asd.asdasd",
     "category": "asdasd",
-    "createdAt": "2024-10-20"
+    "createdAt": "2024-10-20T00:00:00.000Z"
   },
   {
     "id": "76620bd3-fb7d-46cb-aa53-f9928490817b",
@@ -77,7 +77,7 @@
     "description": "ad",
     "url": "http://asd.ad",
     "category": "asd",
-    "createdAt": "2024-10-20"
+    "createdAt": "2024-10-20T00:00:00.000Z"
   },
   {
     "id": "17e3b4e7-8fb7-435d-b000-0c3ecc94ebf2",
@@ -85,7 +85,7 @@
     "description": "asdasd",
     "url": "http://asd.asd",
     "category": "asdasd",
-    "createdAt": "2024-10-20"
+    "createdAt": "2024-10-20T00:00:00.000Z"
   },
   {
     "id": "f730f17b-6edc-4698-9abc-91a9e693254e",
@@ -93,7 +93,7 @@
     "description": "asd",
     "url": "http://asd.asd",
     "category": "asd",
-    "createdAt": "2024-10-20"
+    "createdAt": "2024-10-20T00:00:00.000Z"
   },
   {
     "id": "bc5e65e1-6140-4357-9c58-39c4008b213f",
@@ -101,6 +101,6 @@
     "description": "asdasd",
     "url": "http://ask-ask.ask",
     "category": "asdasd",
-    "createdAt": "2024-10-21"
+    "createdAt": "2024-10-21T00:00:00.000Z"
   }
 ]

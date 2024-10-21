@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 import { ProjectType } from "../../../types.ts";
 import projectsApi from "../services/projectsApi.ts";
+import { projectsSchema } from "../lib/validate.ts";
 
 export function useProjects() {
   const [projectList, setProjectList] = useState<ProjectType[]>([]);
 
   const fetchProjects = async () => {
     const response = await projectsApi.fetch;
+    console.log(projectsSchema.safeParse(response));
     console.log(response);
-    setProjectList(response);
+    setProjectList(projectsSchema.parse(response));
   };
   useEffect(() => {
     fetchProjects();
@@ -33,7 +35,7 @@ export function useProjects() {
     const project: ProjectType = {
       id: crypto.randomUUID(),
       ...data,
-      createdAt: new Date().toISOString().split("T")[0],
+      createdAt: new Date().toISOString(),
     };
     setProjectList((prev) => [...prev, project]);
     add(project);
@@ -53,7 +55,6 @@ export function useProjects() {
   const categoryCounts = projectsByCategory(projectList);
   useEffect(() => {}, [projectList]);
   return {
-    get: fetchProjects,
     add,
     update,
     remove,

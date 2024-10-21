@@ -1,5 +1,4 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import SubmitButton from "../../../components/SubmitButton";
 
 export default function CreateProject({
   updateProject,
@@ -76,7 +75,9 @@ export default function CreateProject({
           value={description}
           onChange={handleChange}
         />
-        <SubmitButton />
+        <button className="submit-button" type="submit">
+          Submit
+        </button>
       </form>
     </>
   );

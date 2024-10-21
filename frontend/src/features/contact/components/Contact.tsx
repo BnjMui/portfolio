@@ -1,5 +1,3 @@
-import { ChangeEvent, FormEvent, useState } from "react";
-import SubmitButton from "../../../components/SubmitButton";
 import useContact from "../hooks/useContact";
 type ContactProps = {
   email: string;
@@ -38,7 +36,9 @@ export default function Contact({ email }: ContactProps) {
           placeholder="Write your message here..."
           onChange={handleChange}
         ></textarea>
-        <SubmitButton />
+        <button className="submit-button" type="submit">
+          Submit
+        </button>
       </form>
     </>
   );
