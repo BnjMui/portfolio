@@ -1,11 +1,11 @@
 import { PropsWithChildren } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { student } from "../configs/student";
-import Experiences from "../features/experience/components/Experiences";
+import { student } from "@/configs/student";
+import Experiences from "@/features/experience/components/Experiences";
 import Empty from "./Empty";
-import Experience from "../features/experience/components/Experience";
-import Contact from "../features/contact/components/Contact";
+import Experience from "@/features/experience/components/Experience";
+import Contact from "@/features/contact/components/Contact";
 
 export default function Layout({ children }: PropsWithChildren) {
   return (

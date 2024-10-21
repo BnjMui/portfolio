@@ -1,5 +1,5 @@
 import { ofetch } from "ofetch";
-import { endpoints } from "../../../configs/urls";
+import { endpoints } from "@/configs/urls";
 
 const fetch = ofetch(endpoints.projects);
 const add = async (newProject: any) => {

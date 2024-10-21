@@ -1,4 +1,4 @@
-import Empty from "../../../components/Empty";
+import Empty from "@/components/Empty";
 import Project from "./Project";
 import useProjects from "../hooks/useProjects";
 import CreateProject from "./CreateProject";

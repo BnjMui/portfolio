@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ProjectType } from "../../../types.ts";
+import { ProjectType } from "@/types.ts";
 import projectsApi from "../services/projectsApi.ts";
 import { projectsSchema } from "../lib/validate.ts";
 
