@@ -1,9 +1,13 @@
 # portfolio
 
+Viktigste forandringen i portfolio er at jeg nå har klart å inkludere riktig README innhold :P
+
 v_3
 I første oppgave skal jeg kommentere hvilke endringer jeg ville kan gjøre, og fordeler/ulemper med disse.
 Den første endringen jeg kunne ha gjort er å bruke children i Projects.tsx. Her kan jeg for eksempel ha children på innsiden av <Empty/> komponenten. Fordelen med dette er at komponenten Projects blir mer gjenbrukbar. Ulempen med dette vil jeg si er at det blir mye kode i App.tsx (Ikke nødvendigvis en ulempe).
 Jeg kunne også refaktorert den koden som regner ut hvor mange kategorier det er, og hvor mange prosjekter per kategori, til en egen komponent som jeg kaller for eksempel Counts. Via dette blir komponenten mer gjenbrukbar og jeg kan bruke den som children i Projects.tsx
+Etter å ha gått videre i kurset innser jeg hvor mye mer jeg kunne refaktorere, som for eksempel å lage egne mapper, som for eksempel features, services, lib, hooks, config osv.
+Det å lage customHooks gjorde mange komponenter renere og lettere å lese/vedlikeholde.
 
 v_2
 I denne oppgaven har jeg igjen endret designet på nettsiden, til et som er litt enklere og mer fordøyelig for øynene.
