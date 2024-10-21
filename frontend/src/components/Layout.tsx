@@ -26,6 +26,8 @@ export default function Layout({ children }: PropsWithChildren) {
               ))}
             </Empty>
           </Experiences>
+        </section>
+        <section>
           <Contact email={student.email} />
         </section>
         {children}

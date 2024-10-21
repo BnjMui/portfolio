@@ -6,6 +6,7 @@ export default function Contact({ email }: ContactProps) {
   const { handleChange, handleSubmit, name, message } = useContact();
   return (
     <>
+      <h2>Ta kontakt her</h2>
       <button
         className="email"
         type="button"
