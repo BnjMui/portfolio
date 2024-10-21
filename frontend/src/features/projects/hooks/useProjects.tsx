@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { ProjectType } from "../types";
-import projectsApi from "../components/services/projectsApi.ts";
+import { ProjectType } from "../../../types.ts";
+import projectsApi from "../services/projectsApi.ts";
 
 export function useProjects() {
   const [projectList, setProjectList] = useState<ProjectType[]>([]);

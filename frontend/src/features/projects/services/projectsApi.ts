@@ -1,14 +1,15 @@
 import { ofetch } from "ofetch";
+import { endpoints } from "../../../configs/urls";
 
-const fetch = ofetch("http://localhost:3999/projects");
+const fetch = ofetch(endpoints.projects);
 const add = async (newProject: any) => {
   try {
-    const addedProject = await ofetch("http://localhost:3999/add", {
+    const addedProject = await ofetch(endpoints.add, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newProject),
+      body: newProject,
     });
     return addedProject;
   } catch (error) {

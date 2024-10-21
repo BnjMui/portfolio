@@ -1,11 +1,10 @@
-import Empty from "./Empty";
+import Empty from "../../../components/Empty";
 import Project from "./Project";
 import useProjects from "../hooks/useProjects";
 import CreateProject from "./CreateProject";
 
 export default function Projects() {
-  const { projectList, get, add, remove, update, categoryCounts } =
-    useProjects();
+  const { projectList, remove, update, categoryCounts } = useProjects();
 
   return (
     <>

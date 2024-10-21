@@ -1,29 +1,11 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import SubmitButton from "./SubmitButton";
-
+import SubmitButton from "../../../components/SubmitButton";
+import useContact from "../hooks/useContact";
 type ContactProps = {
   email: string;
 };
 export default function Contact({ email }: ContactProps) {
-  const [name, setName] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    e.target.name === "name"
-      ? setName(e.target.value)
-      : setMessage(e.target.value);
-  };
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    if (!name || !message) return;
-    console.log(`Message has been sendt by:\t${name}\nMessage:\t${message}`);
-    setName("");
-    setMessage("");
-  };
-
+  const { handleChange, handleSubmit, name, message } = useContact();
   return (
     <>
       <button
