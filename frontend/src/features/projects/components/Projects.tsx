@@ -14,6 +14,16 @@ export default function Projects() {
       </section>
       <section id="projects">
         <h2>Live projects</h2>
+        <h2>Total projects per category:</h2>
+        <ul>
+          {categoryCounts
+            ? Object.entries(categoryCounts).map(([category, count]) => (
+                <li key={category}>
+                  {category}: {count}
+                </li>
+              ))
+            : null}
+        </ul>
         <Empty data={projectList}>
           <div id="project-list">
             {projectList?.map((p, index) => (
@@ -38,16 +48,6 @@ export default function Projects() {
               </Project>
             ))}
           </div>
-          <h2>Total projects per category:</h2>
-          <ul>
-            {categoryCounts
-              ? Object.entries(categoryCounts).map(([category, count]) => (
-                  <li key={category}>
-                    {category}: {count}
-                  </li>
-                ))
-              : null}
-          </ul>
         </Empty>
       </section>
     </>

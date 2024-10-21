@@ -7,10 +7,14 @@ export function useProjects() {
   const [projectList, setProjectList] = useState<ProjectType[]>([]);
 
   const fetchProjects = async () => {
-    const response = await projectsApi.fetch;
-    console.log(projectsSchema.safeParse(response));
-    console.log(response);
-    setProjectList(projectsSchema.parse(response));
+    try {
+      const response = await projectsApi.fetch;
+      console.log(projectsSchema.safeParse(response));
+      console.log(response);
+      setProjectList(projectsSchema.parse(response));
+    } catch (error) {
+      console.error(error);
+    }
   };
   useEffect(() => {
     fetchProjects();
@@ -54,6 +58,7 @@ export function useProjects() {
   };
   const categoryCounts = projectsByCategory(projectList);
   useEffect(() => {}, [projectList]);
+
   return {
     add,
     update,
