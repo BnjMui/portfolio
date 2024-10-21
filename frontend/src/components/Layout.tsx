@@ -2,6 +2,10 @@ import { PropsWithChildren } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { student } from "../configs/student";
+import Experiences from "../features/experience/components/Experiences";
+import Empty from "./Empty";
+import Experience from "../features/experience/components/Experience";
+import Contact from "../features/contact/components/Contact";
 
 export default function Layout({ children }: PropsWithChildren) {
   return (
@@ -13,7 +17,19 @@ export default function Layout({ children }: PropsWithChildren) {
           points={student.points}
         />
       </header>
-      <main>{children}</main>
+      <main>
+        <section>
+          <Experiences>
+            <Empty data={student.experiences}>
+              {student.experiences.map((student: string) => (
+                <Experience key={student} experience={student} />
+              ))}
+            </Empty>
+          </Experiences>
+          <Contact email={student.email} />
+        </section>
+        {children}
+      </main>
       <footer>
         <Footer />
       </footer>
