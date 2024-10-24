@@ -19,7 +19,7 @@ app.get("/projects", async (c) => {
 app.post("/add", async (c) => {
   const newProject = await c.req.json();
   const data = readFile(dataPath, "utf-8");
-  let projects = JSON.parse(await data);
+  let projects: Project[] = JSON.parse(await data);
   projects.push({
     ...newProject,
   });
@@ -31,6 +31,5 @@ app.post("/add", async (c) => {
 
   return c.json({ projects, status: 201 });
 });
-// });
 
 export default app;

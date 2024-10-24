@@ -1,4 +1,4 @@
-import { StudentType } from "../types";
+import { StudentType } from "@/types/types";
 
 const student: StudentType = {
   studentName: "Jonas A. Evensen",

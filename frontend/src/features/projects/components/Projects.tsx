@@ -5,12 +5,12 @@ import CreateProject from "./CreateProject";
 import { FormatedDate } from "../lib/format";
 
 export default function Projects() {
-  const { projectList, remove, update, categoryCounts } = useProjects();
+  const { projectList, remove, categoryCounts } = useProjects();
 
   return (
     <>
       <section>
-        <CreateProject updateProject={update} />
+        <CreateProject />
       </section>
       <section id="projects">
         <h2>Live projects</h2>
@@ -34,9 +34,14 @@ export default function Projects() {
                 <a href={p.url}>{p.url}</a>
                 <h4>Project description:</h4>
                 <p>{p.description}</p>
-                <h4>
-                  Category: {p.category ? p.category : "No category found"}
-                </h4>
+                <h4>Category:</h4>
+                <p>{p.category ? p.category : "No category found"}</p>
+                <h4>Status:</h4>
+                <p> {p.status}</p>
+                <h4>Tags:</h4>
+                <p>{p.tags.join(", ")}</p>
+                <h4>Visibility:</h4>
+                <p> {p.public ? "Public" : "Private"}</p>
                 <button
                   type="button"
                   onClick={() => {

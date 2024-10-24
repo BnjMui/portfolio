@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ProjectType } from "@/types.ts";
+import { ProjectType } from "@/types/types.ts";
 import projectsApi from "../services/projectsApi.ts";
 import { projectsSchema } from "../lib/validate.ts";
 
@@ -31,15 +31,16 @@ export function useProjects() {
     }
   };
 
-  const update = (data: {
-    title: string;
-    description: string;
-    category?: string;
-  }) => {
+  const update = (data: Partial<ProjectType>) => {
     const project: ProjectType = {
       id: crypto.randomUUID(),
-      ...data,
+      title: data.title || "Default name",
+      url: data.url || "no url",
+      description: data.description || "no description",
       createdAt: new Date().toISOString(),
+      public: data.public || false,
+      status: "draft",
+      tags: [],
     };
     setProjectList((prev) => [...prev, project]);
     add(project);

@@ -13,4 +13,7 @@ export type ProjectType = {
   description: string;
   createdAt: string;
   category?: string;
+  public: boolean;
+  status: string;
+  tags: string[];
 };

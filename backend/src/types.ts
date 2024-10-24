@@ -1,7 +1,11 @@
 type Project = {
-  id: string | number;
+  id: string;
   title: string;
+  url?: string;
   description: string;
-  createdAt: Date;
-  category: string;
+  createdAt: string;
+  category?: string;
+  public: boolean;
+  status: string;
+  tags: string[];
 };

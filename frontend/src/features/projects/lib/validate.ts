@@ -9,6 +9,9 @@ const projectSchema = z.object({
   description: z.string(),
   createdAt: z.string().datetime(),
   category: z.string(),
+  status: z.string(),
+  public: z.boolean(),
+  tags: z.array(z.string()),
 });
 
 const projectsSchema = z.array(projectSchema);
